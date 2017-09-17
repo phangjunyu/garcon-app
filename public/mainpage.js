@@ -1,5 +1,5 @@
 $(function(){
-		$('.btn-number').on('click', function(e){
+    $('.btn-number').on('click', function(e){
     e.preventDefault();
 
 		var dishId = $(this).data('dishid')
@@ -76,4 +76,11 @@ $(".input-number-buybtn").keydown(function (e) {
             e.preventDefault();
         }
     });
+});
+$(function(){
+    $('.btn-submit-order').on('click', function(e){
+        window.location.href = "https://venmo.com";
+    })
 })
+
+
