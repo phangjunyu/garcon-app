@@ -7,11 +7,9 @@ block meta
 		
 block append styles
 	link(rel='stylesheet', type='text/css', href='/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css')
-	link(rel='stylesheet', href='tingle.min.css')
 
 block append scripts
 	script(src='./mainpage.js')
-	script(src='tingle.min.js')
 
 	
 block content
@@ -49,6 +47,7 @@ block content
 					span#sizing-addon1.input-group-addon.total-price Total $
 					input#total-price.form-control.input-number(type='text', value = '0')
 				button.btn.btn-default.btn-submit-order(type='submit') Submit Order
+				
 				
 mixin generateCategories(categories)
 	for category in categories
