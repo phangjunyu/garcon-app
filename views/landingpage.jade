@@ -1,12 +1,11 @@
 extends layout
 
-block append style
-link(rel='stylesheet', href='tingle.min.css')
+//- block append style
+//- 	link(rel='stylesheet', href='tingle.min.css')
 
 block append scripts
+	//- script(src='tingle.min.js')
 	script(src='./landingpage.js')
-	script(src='tingle.min.js')
-
 
 block content
 	.xs-col-12
@@ -18,8 +17,8 @@ block content
 			select.form-control.form-control-lg#mood
 				-each val, index in ["Healthy","Sinful","Meat Lover","The Usual ","Adventurous","Sweet","Classic", "Asian"]
 					option(value=index) #{val}
-		div
-			button.btn.btn-primary.btn-pref(onclick='modalFunction()') Special Requests
+		//- div
+		//- 	button.btn.btn-primary.btn-pref(type="button") Special Requests
 
 		div.submission-btn
 			button.btn.btn-primary.btn-go(type='submit') Go!

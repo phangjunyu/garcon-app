@@ -25,15 +25,15 @@ $(function(){
 		    	return false; // nothing happens
 		    }
 		});
-	});
-	// set content
-	modal.setContent('<h1>here\'s some content</h1>');
+		// set content
+		modal.setContent('<h1>here\'s some content</h1>');
 
-	// add a button
-	modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
-	    // here goes some logic
-	    modal.close();
+		// add a button
+		modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
+		    // here goes some logic
+		    modal.close();
+		});
+	
+		modal.open();
 	});
-
-	modal.open();
 })
