@@ -19,7 +19,21 @@ block content
 					option(value=index) #{val}
 		//- div
 		//- 	button.btn.btn-primary.btn-pref(type="button") Special Requests
-
+		+collapseForm()
 		div.submission-btn
 			button.btn.btn-primary.btn-go(type='submit') Go!
-		
+
+mixin collapseForm()
+	.container
+		a.btn.btn-info(href='#special', data-toggle='collapse') Special Requests
+		#special.collapse
+			.input-group
+				span.input-group-addon
+					input(type='checkbox', aria-label='...')
+				div Vegetarian
+				span.input-group-addon
+					input(type='checkbox', aria-label='...')
+				div Allergy
+				span.input-group-addon
+					input(type='checkbox', aria-label='...')
+				div Gluten-Free
