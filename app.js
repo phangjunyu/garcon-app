@@ -11,7 +11,8 @@ var monk = require('monk');
 var db = monk('mongodb://admin:admin@ds139964.mlab.com:39964/garcon-db');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var restaurants = require('./routes/restaurants');
+var menu = require('./routes/menu');
 
 var app = express();
 
@@ -34,7 +35,8 @@ app.use(function(req,res,next){
 });
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/restaurants', restaurants);
+app.use('/menu',menu);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,6 +55,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 app.listen(8080);
 

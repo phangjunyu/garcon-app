@@ -1,18 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-router.post('/additem', function(req,res){
+router.post('/addrestaurant', function(req,res){
   var db = req.db;
-  var collection = db.get('menu');
-});
+  var collection = db.get('restaurants');
+})
 
-router.get('/getmenu',function(req,res){
+router.get('/getrestaurant',function(req,res){
   var db = req.db;
-  var collection = db.get('menu');
+  var collection = db.get('restaurants');
   collection.find({},{},function(e,docs){
       res.json(docs);
-      console.log(docs);
+      consol
   });
-});
+
+})
 
 module.exports = router;
