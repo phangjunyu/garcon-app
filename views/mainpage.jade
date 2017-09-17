@@ -1,0 +1,37 @@
+extends layout
+
+block meta
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		
+block append styles
+	link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+	link(rel='stylesheet', type='text/css', href='/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css')
+
+block append scripts
+	script(src='./mainpage.js')
+	
+block content
+	.col-xs-3.sidenav
+		ul.list-group
+			button.list-group-item(type='button').glyphicon.glyphicon-heart
+			button.list-group-item(type='button')
+			button.list-group-item(type='button')
+			button.list-group-item(type='button')
+	.col-xs-9.main-content
+		div.featuredDish.well
+			img.featuredDish-img(src=mainDish.image)
+			.featuredDish-title #{mainDish.title}
+			div.featuredDish-info
+				span.col-xs-9.featuredDish-description #{mainDish.description}
+				span.col-xs-3.featuredDish-price #{mainDish.price}
+				
+		div.col-xs-12.otherDishes
+			for dish in otherDishes
+				.col-xs-6.div.otherDish
+					img.otherDish-img(src=dish.image)
+					.otherDish-title #{dish.title}
+					div.otherDish-info
+						span.otherDish-price #{dish.price}
+						span.otherDish-description #{dish.description}
