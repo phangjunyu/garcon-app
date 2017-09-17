@@ -4,20 +4,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+
+//Database
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('mongodb://admin:admin@ds139964.mlab.com:39964/garcon-db');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-
-//Database driver connection
-var promise = mongoose.connect('mongodb://admin:admin@ds139964.mlab.com:39964/garcon-db',{
-  useMongoClient: true,
-});
-promise.then(function(db){
-  console.log("db connected");
-})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
