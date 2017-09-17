@@ -9,23 +9,24 @@ router.post('/addrestaurant', function(req,res){
           (err === null) ? { msg: '' } : { msg: err }
       );
   });
-})
+});
 
 router.get('/getrestaurant',function(req,res){
   var db = req.db;
   var collection = db.get('restaurants');
   collection.find({},{},function(e,docs){
       res.json(docs);
+      console.log(docs);
   });
-})
+});
 
-router.get('findrestauranttablelist/:id',function(req,res){
+router.get('/findrestauranttablelist/:restaurantId',function(req,res){
     var db = req.db;
     var collection = db.get('restaurants');
-    var userToFind = req.params.id;
-    collection.findOne({ 'restaurantId' : userToFind },{'tableList':1}, function(err) {
-        res.send((err === null) ? { msg: '' } : { msg:'error: ' + err });
+    var userToFind = parseInt(req.params.restaurantId);
+    collection.find({"restaurantId": userToFind}, function(e,docs) {
+        res.json(docs);
     });
-})
+});
 
 module.exports = router;
