@@ -43,13 +43,13 @@ app.get('/mainpage', function (req, res) {
 	var mainDish = {
 		title: 'Fish & Chips',
 		price: '$10',
-		description: 'tantalizing',
+		description: 'long string njegvwgqwdsg jhadhckjcc ccccccsss ssssssss sssssss ssssssskbsk hdbhksdhkakdbaskdaksdbksab sadkjsakagsdsg',
 		image: 'http://www.bizzielizzies.co.uk/wp-content/uploads/2015/03/slide-fish-chips-2015.jpg'
 	}
 	var otherDish = {
 		title: 'Ceasar Salad',
-		price: '$7',
-		description: 'not bad',
+		price: '$7.79',
+		description: 'not bad asdfadsf asdf as fasf asf as fasdf asdf asdfasf asdf as fasd f',
 		image: 'http://jetspizza.com/dbphotos/display/c161462910486f60cf38484ecf458adf/664/410'
 	}
 	var otherDishes = []
@@ -82,14 +82,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-<<<<<<< HEAD
 app.listen(3000, function(){
 	console.log("app listening on port 3000!")
 })
-=======
-
-
-app.listen(8080);
->>>>>>> 258ecee6c1a2672e9b207ba19324606d277f5e5b
 
 module.exports = app;

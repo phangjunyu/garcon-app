@@ -13,25 +13,40 @@ block append scripts
 	script(src='./mainpage.js')
 	
 block content
-	.col-xs-3.sidenav
-		ul.list-group
-			button.list-group-item(type='button').glyphicon.glyphicon-heart
-			button.list-group-item(type='button')
-			button.list-group-item(type='button')
-			button.list-group-item(type='button')
-	.col-xs-9.main-content
-		div.featuredDish.well
-			img.featuredDish-img(src=mainDish.image)
-			.featuredDish-title #{mainDish.title}
-			div.featuredDish-info
-				span.col-xs-9.featuredDish-description #{mainDish.description}
-				span.col-xs-3.featuredDish-price #{mainDish.price}
-				
-		div.col-xs-12.otherDishes
-			for dish in otherDishes
-				.col-xs-6.div.otherDish
-					img.otherDish-img(src=dish.image)
-					.otherDish-title #{dish.title}
-					div.otherDish-info
-						span.otherDish-price #{dish.price}
-						span.otherDish-description #{dish.description}
+	#page-wrap
+		.col-xs-3.sidenav
+			ul.list-group.sidenav-menu
+				button.list-group-item(type='button') Appetizers
+				button.list-group-item(type='button') Mains
+				button.list-group-item(type='button') Desserts
+				button.list-group-item(type='button') Drinks
+		.col-xs-9.main-content
+			div.featuredDish.well
+				img.featuredDish-img(src=mainDish.image)
+				.featuredDish-title #{mainDish.title}
+				div.featuredDish-info
+					span.col-xs-9.featuredDish-description #{mainDish.description}
+					span.col-xs-3.featuredDish-price #{mainDish.price}
+					
+			div.container-fluid.otherDishes
+				for dish in otherDishes
+					.row.otherDish-info
+						.col-xs-6
+							img.otherDish-img(src=dish.image)
+						.col-xs-6.otherDish-words
+							.otherDish-title #{dish.title}
+							.otherDish-price #{dish.price}
+							//- .otherDish-description #{dish.description}
+							.buybtn
+								+generateBuyButton()
+							
+							
+mixin generateBuyButton()
+	.input-group
+		span.input-group-btn
+			button.btn.btn-default.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
+				span.glyphicon.glyphicon-minus
+		input.form-control.input-number(type='text', name='quant[1]', value='1', min='1', max='10')
+		span.input-group-btn
+			button.btn.btn-default.btn-number(type='button', data-type='plus', data-field='quant[1]')
+				span.glyphicon.glyphicon-plus
