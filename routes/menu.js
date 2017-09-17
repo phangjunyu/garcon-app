@@ -6,9 +6,9 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/adduser', function(req,res){
+router.post('/additem', function(req,res){
   var db = req.db;
-  var collection = db.get('userlist');
+  var collection = db.get('menu');
 })
 
 module.exports = router;
