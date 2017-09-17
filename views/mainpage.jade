@@ -48,6 +48,9 @@ block content
 				button.btn.btn-default.btn-submit-order(type='submit') Submit Order
 				
 mixin generateCategories(categories)
+	-var moods = ["Healthy","Sinful","Meat Lover","The Usual ","Adventurous","Sweet","Classic", "Asian"]
+	-var moodWord = moods[mood]
+	li.list-group-item.list-mood(type='button') #{moodWord}
 	for category in categories
 		button.list-group-item.button-category(type='button') #{category}
 		

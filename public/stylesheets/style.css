@@ -16,7 +16,8 @@ a {
 
 .main-content{
 	padding:0;
-	border-left-style: outset;
+	border-left-style: ridge;
+	border-left-width: thin;
 	margin-bottom: 100px;
 }
 
@@ -37,20 +38,20 @@ a {
 		padding:10px;
     bottom: 0;
 		background-color: white;
+		z-index: 1000;
 }
 .checkout{
 
 }
 .total-price{
-
-
+	color: #679ef7;
 }
 .btn-submit-order{
 	width:100%;
 	text-align: center;
 }
 .buybtn{
-	display:inline-flex;
+	display:inline-block;
 	width: 30vw;
 }
 
@@ -90,10 +91,6 @@ a {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.total-price{
-	color:darkgreen;
 }
 
 .featuredDish-title{
@@ -196,9 +193,14 @@ a {
 	margin-top: 20px;
 	margin-left: 30px;
 	margin-right: 30px;
+	background-color: #679ef7;
 }
 
 /*FOR FUN*/
+.list-mood{
+	background-color: #679ef7;
+	color: white;
+}
 
 .button-category{
 	transition: background 0.5s;

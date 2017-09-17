@@ -64,6 +64,7 @@ app.get('/mainpage/:mood', function (req, res) {
 	var otherDishes = menu.slice(1,menu.length+1);
 
 	var viewParameters = {
+		mood: mood,
 		categories: categories,
 		mainDish: mainDish,
 		otherDishes: otherDishes
