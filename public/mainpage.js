@@ -1,7 +1,5 @@
 $(function(){
-	//plugin bootstrap minus and plus
-//http://jsfiddle.net/laelitenetwork/puJ6G/
-		$('.btn-number').on('click', function(e){
+    $('.btn-number').on('click', function(e){
     e.preventDefault();
 
 		var dishId = $(this).data('dishid')
@@ -34,7 +32,7 @@ $(function(){
             }
 
         }
-				totalPrice.setAttribute('value', changeInPrice  + curTotalPrice)
+				totalPrice.setAttribute('value', parseFloat((changeInPrice  + curTotalPrice).toFixed(2)))
     } else {
         input.val(0);
     }
@@ -78,4 +76,11 @@ $(".input-number-buybtn").keydown(function (e) {
             e.preventDefault();
         }
     });
+});
+$(function(){
+    $('.btn-submit-order').on('click', function(e){
+        window.location.href = "https://venmo.com";
+    })
 })
+
+
