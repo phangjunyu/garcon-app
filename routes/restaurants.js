@@ -16,7 +16,6 @@ router.get('/getrestaurant',function(req,res){
   var collection = db.get('restaurants');
   collection.find({},{},function(e,docs){
       res.json(docs);
-      console.log(docs);
   });
 });
 
