@@ -61,6 +61,7 @@ app.get('/mainpage', function (req, res) {
 		mainDish: mainDish,
 		otherDishes: otherDishes
 	}
+
   res.render('mainpage', viewParameters)
 })
 
@@ -82,14 +83,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-<<<<<<< HEAD
 app.listen(3000, function(){
 	console.log("app listening on port 3000!")
 })
-=======
-
-
-app.listen(8080);
->>>>>>> 258ecee6c1a2672e9b207ba19324606d277f5e5b
 
 module.exports = app;
