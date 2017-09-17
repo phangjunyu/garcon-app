@@ -17,7 +17,15 @@ router.get('/getrestaurant',function(req,res){
   collection.find({},{},function(e,docs){
       res.json(docs);
   });
+})
 
+router.get('findrestaurant/:id',function(req,res){
+    var db = req.db;
+    var collection = db.get('restaurants');
+    var userToFind = req.params.id;
+    collection.findOne({ '_id' : userToFind },{}, function(err) {
+        res.send((err === null) ? { msg: '' } : { msg:'error: ' + err });
+    });
 })
 
 module.exports = router;
