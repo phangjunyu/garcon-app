@@ -19,11 +19,11 @@ router.get('/getrestaurant',function(req,res){
   });
 })
 
-router.get('findrestaurant/:id',function(req,res){
+router.get('findrestauranttablelist/:id',function(req,res){
     var db = req.db;
     var collection = db.get('restaurants');
     var userToFind = req.params.id;
-    collection.findOne({ '_id' : userToFind },{}, function(err) {
+    collection.findOne({ 'restaurantId' : userToFind },{'tableList':1}, function(err) {
         res.send((err === null) ? { msg: '' } : { msg:'error: ' + err });
     });
 })
