@@ -27,11 +27,11 @@ block content
 					span.col-xs-3.featuredDish-price $#{mainDish.price}
 				div.buybtnmain
 					-console.log(mainDish)
-					+generateBuyButton(mainDish.name, mainDish.price)
+					+generateBuyButton(mainDish._id, mainDish.price)
 					
 			div.container-fluid.otherDishes
 				for dish in otherDishes
-					-var dishId = dish.name
+					-var dishId = dish._id
 					-var dishPrice = dish.price
 					.row.otherDish-info(data-dishref=dishId, data-dishprice=dishPrice)
 						.col-xs-6

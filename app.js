@@ -38,6 +38,10 @@ app.use('/', index);
 app.use('/restaurants', restaurants);
 app.use('/menu',menu);
 
+app.get('/landingpage', function(req, res){
+
+})
+
 app.get('/mainpage', function (req, res) {
 	var collection = db.collection('menu');
 	collection.find({},{},function(e,docs){
