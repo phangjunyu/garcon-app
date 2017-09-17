@@ -22,13 +22,14 @@ block content
 				img.featuredDish-img(src=mainDish.imageURL)
 				.featuredDish-title #{mainDish.name}
 				div.featuredDish-info
-					span.col-xs-9.featuredDish-description #{mainDish.caption}
-					span.col-xs-3.featuredDish-price $#{mainDish.price}
-				div.buybtnmain
+					span.featuredDish-description #{mainDish.caption}
+				div.col-xs-9.buybtnmain
 					+generateBuyButton(mainDish._id, mainDish.price)
+				div.col-xs-3.featuredDish-price $#{mainDish.price}
 					
 			div.container-fluid.otherDishes
 				for dish in otherDishes
+					hr
 					-var dishId = dish._id
 					-var dishPrice = dish.price
 					.row.otherDish-info(data-dishref=dishId, data-dishprice=dishPrice)
@@ -42,7 +43,7 @@ block content
 								+generateBuyButton(dishId, dishPrice)
 			#footer
 				.input-group.checkout
-					span#sizing-addon1.input-group-addon Total
+					span#sizing-addon1.input-group-addon.total-price Total $
 					input#total-price.form-control.input-number(type='text', value = '0')
 				button.btn.btn-default.btn-submit-order(type='submit') Submit Order
 				
@@ -50,7 +51,6 @@ mixin generateCategories(categories)
 	for category in categories
 		button.list-group-item(type='button') #{category}
 		
-							
 mixin generateBuyButton(dishId, dishPrice)
 	.input-group.input-buy-btn
 		span.input-group-btn
