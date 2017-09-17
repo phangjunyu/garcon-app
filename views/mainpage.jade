@@ -49,7 +49,7 @@ block content
 				
 mixin generateCategories(categories)
 	for category in categories
-		button.list-group-item(type='button') #{category}
+		button.list-group-item.button-category(type='button') #{category}
 		
 mixin generateBuyButton(dishId, dishPrice)
 	.input-group.input-buy-btn

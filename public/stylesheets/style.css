@@ -197,3 +197,9 @@ a {
 	margin-left: 30px;
 	margin-right: 30px;
 }
+
+/*FOR FUN*/
+
+.button-category{
+	transition: background 0.5s;
+}
