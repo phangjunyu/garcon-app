@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../garcon-app/app.js" description="&#10;function compare(a,b,c){&#10;&#9;const moodA = a[&quot;mood&quot;]..." line="99" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="280bf8a7-f751-49ae-84e5-6255a03be620" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../garcon-app/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../garcon-app/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../garcon-app/app.js" afterPath="$PROJECT_DIR$/../garcon-app/app.js" />
-    </list>
+    <list default="true" id="280bf8a7-f751-49ae-84e5-6255a03be620" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../garcon-app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+            <state relative-caret-position="208">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -33,7 +33,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-146">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1505644730000" expanded="true" signature="480:1981" ph="..." />
+                <marker date="1505644730000" expanded="true" signature="500:1981" ph="..." />
+                <marker date="1505644730000" expanded="true" signature="512:555" ph="..." />
+                <marker date="1505644730000" expanded="true" signature="526:555" ph="..." />
+                <marker date="1505644730000" expanded="true" signature="1971:1981" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,7 +213,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505603555216</updated>
-      <workItem from="1505603557894" duration="26158000" />
+      <workItem from="1505603557894" duration="28561000" />
     </task>
     <task id="LOCAL-00001" summary="port 8080">
       <created>1505604505869</created>
@@ -335,11 +341,25 @@
       <option name="project" value="LOCAL" />
       <updated>1505641389283</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="categories added">
+      <created>1505641903558</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1505641903558</updated>
+    </task>
+    <task id="LOCAL-00020" summary="sorting by filter">
+      <created>1505644725711</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1505644725711</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26158000" />
+    <option name="totallyTimeSpent" value="28561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="42" width="1260" height="685" extended-state="0" />
@@ -380,7 +400,8 @@
     <MESSAGE value="add item api" />
     <MESSAGE value="added global js" />
     <MESSAGE value="categories added" />
-    <option name="LAST_COMMIT_MESSAGE" value="categories added" />
+    <MESSAGE value="sorting by filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorting by filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -497,14 +518,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-146">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1505644730000" expanded="true" signature="480:1981" ph="..." />
+            <marker date="1505644730000" expanded="true" signature="500:1981" ph="..." />
+            <marker date="1505644730000" expanded="true" signature="512:555" ph="..." />
+            <marker date="1505644730000" expanded="true" signature="526:555" ph="..." />
+            <marker date="1505644730000" expanded="true" signature="1971:1981" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../garcon-app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        <state relative-caret-position="208">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
