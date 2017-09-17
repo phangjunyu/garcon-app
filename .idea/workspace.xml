@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="280bf8a7-f751-49ae-84e5-6255a03be620" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../garcon-app/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../garcon-app/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../garcon-app/app.js" afterPath="$PROJECT_DIR$/../garcon-app/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -185,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505603555216</updated>
-      <workItem from="1505603557894" duration="24313000" />
+      <workItem from="1505603557894" duration="25331000" />
     </task>
     <task id="LOCAL-00001" summary="port 8080">
       <created>1505604505869</created>
@@ -278,11 +277,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505632853018</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="categories added">
+      <created>1505637594620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1505637594620</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24313000" />
+    <option name="totallyTimeSpent" value="25331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="42" width="1260" height="685" extended-state="0" />
@@ -321,7 +327,8 @@
     <MESSAGE value="added calling of endpoint" />
     <MESSAGE value="add item api" />
     <MESSAGE value="added global js" />
-    <option name="LAST_COMMIT_MESSAGE" value="added global js" />
+    <MESSAGE value="categories added" />
+    <option name="LAST_COMMIT_MESSAGE" value="categories added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
