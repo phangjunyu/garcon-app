@@ -47,7 +47,7 @@ app.get('/mainpage/:mood', function (req, res) {
 	collection.find({},{},function(e,docs){
 	var menu = docs[0]['menu'];
 	var categories = [];
-	var mood = 7;
+	var mood = req.params.mood;
 	for(var i = 0; i<menu.length;i++){
 		var category = menu[i]['type'];
 		if(!categories.includes(category)) {
@@ -59,7 +59,6 @@ app.get('/mainpage/:mood', function (req, res) {
 			menu = arraymove(menu,i,0)
 		}
 	}
-	console.log(menu);
 
 	var mainDish = menu[0];
 	var otherDishes = menu.slice(1,menu.length+1);

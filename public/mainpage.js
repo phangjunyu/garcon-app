@@ -1,6 +1,4 @@
 $(function(){
-	//plugin bootstrap minus and plus
-//http://jsfiddle.net/laelitenetwork/puJ6G/
 		$('.btn-number').on('click', function(e){
     e.preventDefault();
 
