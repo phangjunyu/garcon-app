@@ -43,13 +43,20 @@ app.get('/mainpage', function (req, res) {
 	collection.find({},{},function(e,docs){
 	var menu = docs[0]['menu'];
 	var categories = [];
+	var mood = 7;
 	for(var i = 0; i<menu.length;i++){
 		var category = menu[i]['type'];
 		if(!categories.includes(category)) {
             categories.push(category);
         }
 	}
+	for(var i = 0;i<menu.length;i++){
+		if(menu[i]['mood']==mood){
+			menu = arraymove(menu,i,0)
+		}
+	}
 	console.log(menu);
+
 	var mainDish = menu[0];
 	var otherDishes = menu.slice(1,menu.length+1);
 	// var mainDish = {
@@ -98,6 +105,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+function arraymove(arr, fromIndex, toIndex) {
+    var element = arr[fromIndex];
+    arr.splice(fromIndex, 1);
+    arr.splice(toIndex, 0, element);
+    return arr;
+};
 
 app.listen(3000, function(){
 	console.log("app listening on port 3000!")
