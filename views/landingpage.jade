@@ -1,0 +1,18 @@
+extends layout
+
+block append scripts
+	script(src='./landingpage.js')
+
+block content
+	.xs-col-12
+		div.garcon-div
+			img.garcon-icon(src='SirBanner.png')
+		div.question
+			span Welcome to Garcon's! What is your mood today?
+		div.answer
+			select.form-control.form-control-lg#mood
+				-for (var i = 1; i <= 8 ; i ++){
+				option(value=i) #{i}
+				-}
+		div.submission-btn
+			button.btn.btn-primary.btn-go(type='submit') Go!

@@ -39,10 +39,10 @@ app.use('/restaurants', restaurants);
 app.use('/menu',menu);
 
 app.get('/landingpage', function(req, res){
-
+	res.render('landingpage')
 })
 
-app.get('/mainpage', function (req, res) {
+app.get('/mainpage/:mood', function (req, res) {
 	var collection = db.collection('menu');
 	collection.find({},{},function(e,docs){
 	var menu = docs[0]['menu'];

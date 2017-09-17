@@ -34,7 +34,7 @@ $(function(){
             }
 
         }
-				totalPrice.setAttribute('value', changeInPrice  + curTotalPrice)
+				totalPrice.setAttribute('value', parseFloat((changeInPrice  + curTotalPrice).toFixed(2)))
     } else {
         input.val(0);
     }
