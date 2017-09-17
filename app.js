@@ -39,6 +39,16 @@ app.use('/restaurants', restaurants);
 app.use('/menu',menu);
 
 app.get('/mainpage', function (req, res) {
+	var collection = db.collection('menu');
+	collection.find({},{},function(e,docs){
+	var menu = docs[0]['menu'];
+	var categories = [];
+	for(var i = 0; i<menu.length;i++){
+		var category = menu[i]['type'];
+		if(!categories.includes(category)) {
+            categories.push(category);
+        }
+	}
 
 	var mainDish = {
 		title: 'Fish & Chips',
@@ -62,7 +72,8 @@ app.get('/mainpage', function (req, res) {
 		otherDishes: otherDishes
 	}
 
-  res.render('mainpage', viewParameters)
+  	res.render('mainpage', viewParameters)
+	});
 })
 
 // catch 404 and forward to error handler
