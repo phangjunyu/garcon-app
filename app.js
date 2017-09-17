@@ -61,6 +61,7 @@ app.get('/mainpage', function (req, res) {
 		mainDish: mainDish,
 		otherDishes: otherDishes
 	}
+
   res.render('mainpage', viewParameters)
 })
 
