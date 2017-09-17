@@ -68,6 +68,14 @@ a {
 	display: table;
 }
 
+.restaurant-icon{
+	width:100%;
+}
+
+.profile-settings{
+	margin-top:10vh;
+}
+
 .featuredDish-img{
 	object-fit: contain;
 	max-width: 60vw;

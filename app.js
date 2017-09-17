@@ -49,30 +49,11 @@ app.get('/mainpage', function (req, res) {
             categories.push(category);
         }
 	}
-	console.log(menu);
 	var mainDish = menu[0];
 	var otherDishes = menu.slice(1,menu.length+1);
-	// var mainDish = {
-	// 	title: 'Fish & Chips',
-	// 	price: '10',
-	// 	_id: 1001,
-	// 	description: 'long string njegvwgqwdsg jhadhckjcc ccccccsss ssssssss sssssss ssssssskbsk hdbhksdhkakdbaskdaksdbksab sadkjsakagsdsg',
-	// 	image: 'http://www.bizzielizzies.co.uk/wp-content/uploads/2015/03/slide-fish-chips-2015.jpg'
-	// }
-    //
-	// var otherDishes = []
-	// for(var i = 0; i < 10; i++){
-	// 	var otherDish = {
-	// 		title: 'Ceasar Salad',
-	// 		price: (i+1)*2,
-	// 		_id: i,
-	// 		description: 'not bad asdfadsf asdf as fasf asf as fasdf asdf asdfasf asdf as fasd f',
-	// 		image: 'http://jetspizza.com/dbphotos/display/c161462910486f60cf38484ecf458adf/664/410'
-	// 	}
-	// 	otherDishes.push(otherDish)
-	// }
 
 	var viewParameters = {
+		categories: categories,
 		mainDish: mainDish,
 		otherDishes: otherDishes
 	}

@@ -16,29 +16,28 @@ block content
 	#page-wrap
 		.col-xs-3.sidenav
 			ul.list-group.sidenav-menu
-				button.list-group-item(type='button') Appetizers
-				button.list-group-item(type='button') Mains
-				button.list-group-item(type='button') Desserts
-				button.list-group-item(type='button') Drinks
+				img.list-group-item.restaurant-icon(src="http://a1821.phobos.apple.com/us/r30/Purple/v4/d1/32/57/d1325797-111c-e954-3eac-ce43ea15ec14/mzl.labdwvme.png")
+				+generateCategories(categories)
 		.col-xs-9.main-content
 			div.featuredDish.well
-				img.featuredDish-img(src=mainDish.image)
-				.featuredDish-title #{mainDish.title}
+				img.featuredDish-img(src=mainDish.imageURL)
+				.featuredDish-title #{mainDish.name}
 				div.featuredDish-info
-					span.col-xs-9.featuredDish-description #{mainDish.description}
-					span.col-xs-3.featuredDish-price #{mainDish.price}
+					span.col-xs-9.featuredDish-description #{mainDish.caption}
+					span.col-xs-3.featuredDish-price $#{mainDish.price}
 				div.buybtnmain
-					+generateBuyButton(mainDish._id, mainDish.price)
+					-console.log(mainDish)
+					+generateBuyButton(mainDish.name, mainDish.price)
 					
 			div.container-fluid.otherDishes
 				for dish in otherDishes
-					-var dishId = dish._id
+					-var dishId = dish.name
 					-var dishPrice = dish.price
 					.row.otherDish-info(data-dishref=dishId, data-dishprice=dishPrice)
 						.col-xs-6
-							img.otherDish-img(src=dish.image)
+							img.otherDish-img(src=dish.imageURL)
 						.col-xs-6.otherDish-words
-							.otherDish-title #{dish.title}
+							.otherDish-title #{dish.name}
 							.otherDish-price $#{dishPrice}
 							//- .otherDish-description #{dish.description}
 							.buybtn
@@ -49,7 +48,10 @@ block content
 					input#total-price.form-control.input-number(type='text', value = '0')
 				button.btn.btn-default.btn-submit-order(type='button') Submit Order
 				
-							
+mixin generateCategories(categories)
+	for category in categories
+		button.list-group-item(type='button') #{category}
+		
 							
 mixin generateBuyButton(dishId, dishPrice)
 	.input-group.input-buy-btn
