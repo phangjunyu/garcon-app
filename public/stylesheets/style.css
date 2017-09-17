@@ -30,9 +30,36 @@ a {
 
 }
 
+#footer {
+    position: fixed;
+		padding:10px;
+    bottom: 0;
+		background-color: white;
+}
+.checkout{
+
+}
+.total-price{
+
+
+}
+.btn-submit-order{
+	width:100%;
+	text-align: center;
+}
 .buybtn{
 	display:inline-flex;
 	width: 30vw;
+}
+
+.buybtnmain{
+	margin-left: 15vw;
+	margin-right: 15vw;
+	text-align: center;
+}
+
+.input-buy-btn{
+	position:sticky;
 }
 
 .featuredDish{

@@ -42,19 +42,22 @@ app.get('/mainpage', function (req, res) {
 
 	var mainDish = {
 		title: 'Fish & Chips',
-		price: '$10',
+		price: '10',
+		_id: 1001,
 		description: 'long string njegvwgqwdsg jhadhckjcc ccccccsss ssssssss sssssss ssssssskbsk hdbhksdhkakdbaskdaksdbksab sadkjsakagsdsg',
 		image: 'http://www.bizzielizzies.co.uk/wp-content/uploads/2015/03/slide-fish-chips-2015.jpg'
 	}
-	var otherDish = {
-		title: 'Ceasar Salad',
-		price: '$7.79',
-		description: 'not bad asdfadsf asdf as fasf asf as fasdf asdf asdfasf asdf as fasd f',
-		image: 'http://jetspizza.com/dbphotos/display/c161462910486f60cf38484ecf458adf/664/410'
-	}
+
 	var otherDishes = []
 	for(var i = 0; i < 10; i++){
-		otherDishes[i] = otherDish
+		var otherDish = {
+			title: 'Ceasar Salad',
+			price: (i+1)*2,
+			_id: i,
+			description: 'not bad asdfadsf asdf as fasf asf as fasdf asdf asdfasf asdf as fasd f',
+			image: 'http://jetspizza.com/dbphotos/display/c161462910486f60cf38484ecf458adf/664/410'
+		}
+		otherDishes.push(otherDish)
 	}
 
 	var viewParameters = {

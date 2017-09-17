@@ -27,26 +27,36 @@ block content
 				div.featuredDish-info
 					span.col-xs-9.featuredDish-description #{mainDish.description}
 					span.col-xs-3.featuredDish-price #{mainDish.price}
+				div.buybtnmain
+					+generateBuyButton(mainDish._id, mainDish.price)
 					
 			div.container-fluid.otherDishes
 				for dish in otherDishes
-					.row.otherDish-info
+					-var dishId = dish._id
+					-var dishPrice = dish.price
+					.row.otherDish-info(data-dishref=dishId, data-dishprice=dishPrice)
 						.col-xs-6
 							img.otherDish-img(src=dish.image)
 						.col-xs-6.otherDish-words
 							.otherDish-title #{dish.title}
-							.otherDish-price #{dish.price}
+							.otherDish-price $#{dishPrice}
 							//- .otherDish-description #{dish.description}
 							.buybtn
-								+generateBuyButton()
+								+generateBuyButton(dishId, dishPrice)
+			#footer
+				.input-group.checkout
+					span#sizing-addon1.input-group-addon Total
+					input#total-price.form-control.input-number(type='text', value = '0')
+				button.btn.btn-default.btn-submit-order(type='button') Submit Order
+				
 							
 							
-mixin generateBuyButton()
-	.input-group
+mixin generateBuyButton(dishId, dishPrice)
+	.input-group.input-buy-btn
 		span.input-group-btn
-			button.btn.btn-default.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
+			button.btn.btn-default.btn-number(type='button', disabled='disabled', data-type='minus', data-dishid = dishId)
 				span.glyphicon.glyphicon-minus
-		input.form-control.input-number(type='text', name='quant[1]', value='1', min='1', max='10')
+		input.form-control.input-number.input-number-buybtn(type='text', name=dishId, value='0', min='0', max = '9', data-dishprice = dishPrice)
 		span.input-group-btn
-			button.btn.btn-default.btn-number(type='button', data-type='plus', data-field='quant[1]')
+			button.btn.btn-default.btn-number(type='button', data-type='plus', data-dishid = dishId)
 				span.glyphicon.glyphicon-plus
